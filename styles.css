@@ -1,0 +1,725 @@
+/* Reset y Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul-barca: #004d98;
+  --rojo-barca: #a50044;
+  --azul-oscuro: #00285e;
+  --dorado: #fdb913;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2a2a2a;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, var(--rojo-barca) 0%, var(--azul-barca) 100%);
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Navegación */
+.navbar {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--azul-barca), var(--dorado));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 600;
+  margin: 0 10px;
+  padding: 8px 20px !important;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+  color: white !important;
+  background: linear-gradient(45deg, var(--azul-barca), var(--rojo-barca));
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.4);
+}
+
+/* Contenedor Principal */
+.main-container {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+}
+
+/* Sección de Partidos */
+.partidos-section {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.partidos-header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, white, var(--dorado));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* Scroll de Partidos */
+.partidos-scroll {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.partidos-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.partidos-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.partidos-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--azul-barca), var(--rojo-barca));
+  border-radius: 10px;
+}
+
+/* Tarjeta de Partido */
+.partido-card {
+  background: linear-gradient(135deg, rgba(0, 77, 152, 0.3), rgba(165, 0, 68, 0.3));
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.partido-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--dorado);
+}
+
+.partido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.competition {
+  background: var(--dorado);
+  color: var(--azul-oscuro);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fecha {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.partido-teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.team-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.team-name {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.vs {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--dorado);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón Reservar */
+.btn-reservar {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, var(--azul-barca), var(--azul-oscuro));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.4);
+}
+
+.btn-reservar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 77, 152, 0.6);
+  background: linear-gradient(45deg, var(--azul-oscuro), var(--azul-barca));
+}
+
+/* Sección del Estadio */
+.estadio-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.estadio-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.estadio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.estadio-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  width: 80%;
+}
+
+.estadio-overlay h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, white, var(--dorado));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.estadio-overlay p {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+/* Modal */
+.modal-content {
+  background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-medio));
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.partido-info-modal p {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.tipo-entrada-section {
+  margin: 25px 0;
+}
+
+.tipo-entrada-section h6 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--dorado);
+}
+
+.entrada-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entrada-option {
+  position: relative;
+}
+
+.entrada-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.entrada-option label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.entrada-option input[type="radio"]:checked + label {
+  background: linear-gradient(45deg, var(--azul-barca), var(--azul-oscuro));
+  border-color: var(--dorado);
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.4);
+}
+
+.entrada-nombre {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.entrada-precio {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--dorado);
+}
+
+.cantidad-section {
+  margin: 25px 0;
+}
+
+.cantidad-section label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--dorado);
+}
+
+.cantidad-section input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.total-section {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(253, 185, 19, 0.1);
+  border: 2px solid var(--dorado);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.total-section h6 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.total-section span {
+  color: var(--dorado);
+  font-size: 1.8rem;
+}
+
+.modal-footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+}
+
+.modal-footer .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+.modal-footer .btn-primary {
+  background: linear-gradient(45deg, var(--azul-barca), var(--azul-oscuro));
+  border: none;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.4);
+}
+
+/* Página de Reservas */
+.reservas-section {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.reservas-header {
+  margin-bottom: 30px;
+}
+
+.reservas-scroll {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.reservas-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reservas-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.reservas-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--azul-barca), var(--rojo-barca));
+  border-radius: 10px;
+}
+
+/* Tabla de Reservas */
+.tabla-reservas {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-bottom: 30px;
+}
+
+.tabla-reservas thead th {
+  background: linear-gradient(45deg, var(--azul-oscuro), var(--azul-barca));
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+  color: white;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabla-reservas thead th:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.tabla-reservas thead th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.tabla-reservas tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tabla-reservas tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.tabla-reservas tbody td {
+  padding: 20px 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabla-reservas tbody tr td:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px 0 0 12px;
+}
+
+.tabla-reservas tbody tr td:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 12px 12px 0;
+}
+
+.partido-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.mini-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.partido-nombre {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Badges */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.badge-normal {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+}
+
+.badge-premium {
+  background: linear-gradient(45deg, #6f42c1, #e83e8c);
+  color: white;
+}
+
+.badge-vip {
+  background: linear-gradient(45deg, var(--dorado), #ff9800);
+  color: var(--azul-oscuro);
+}
+
+/* Botón Cancelar */
+.btn-cancelar {
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-cancelar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* Resumen */
+.resumen-section {
+  margin: 30px 0;
+}
+
+.resumen-card {
+  background: linear-gradient(135deg, rgba(0, 77, 152, 0.3), rgba(165, 0, 68, 0.3));
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.resumen-card h5 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: var(--dorado);
+}
+
+.resumen-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resumen-item:last-child {
+  border-bottom: none;
+}
+
+.resumen-item.total {
+  font-size: 1.2rem;
+  padding-top: 20px;
+  margin-top: 10px;
+  border-top: 2px solid var(--dorado);
+  border-bottom: none;
+}
+
+.resumen-item.total strong {
+  color: var(--dorado);
+  font-size: 1.5rem;
+}
+
+/* Acciones Globales */
+.acciones-globales {
+  margin-top: 25px;
+}
+
+.btn-cancelar-todas {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #dc3545, #bd2130);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+.btn-cancelar-todas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .estadio-section {
+    display: none;
+  }
+  
+  .partidos-section,
+  .reservas-section {
+    min-height: 100vh;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .brand-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partidos-section,
+  .reservas-section {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .partido-teams {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .vs {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  
+  .tabla-reservas {
+    font-size: 0.85rem;
+  }
+  
+  .tabla-reservas thead th,
+  .tabla-reservas tbody td {
+    padding: 10px 8px;
+  }
+  
+  .partido-mini {
+    flex-wrap: wrap;
+  }
+  
+  .estadio-overlay h2 {
+    font-size: 2rem;
+  }
+  
+  .estadio-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .nav-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .brand-text {
+    font-size: 1.2rem;
+  }
+  
+  .team-logo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .team-name {
+    font-size: 0.9rem;
+  }
+  
+  /* Tabla responsive en móviles */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .tabla-reservas {
+    min-width: 600px;
+  }
+}

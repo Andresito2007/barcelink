@@ -1,32 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--DECLARAMOS NUESTRO DOCUMENTO HTML CON HTML5-->
 <html lang="es">
-
-<head>
+<head> <!--El head la parte no visible de nuestra pagina web-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BARCELINK - Reserva tus entradas</title>
+  <title>BARCELINK - Reserva tus entradas</title> <!--El titulo de nuestra pagina wweb (la parte no visible)-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<!--usare la herramienta bootstrap para los estilos y el responsive-->
+  <link rel="stylesheet" href="styles.css"><!--vinculamos con css para aplicar estilos-->
 </head>
-
 <body>
-  <!-- Navegación -->
+<!-- navegacion-->
+<!--definimos la seccion de navegacion con <nav>-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid px-4">
+<!--usamos los atributos de bstrp navbar y navbar-expand-lg para que se adapte a distintas pantallas.-->
+    <div class="container-fluid px-4"> <!--class es un atributo que usamos para asignar clases a un elemento-->
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="FC Barcelona" class="nav-logo me-2">
-        <span class="brand-text">BARCELINK</span>
+        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="FC Barcelona"
+          class="nav-logo me-2">
+        <span class="logo">BARCELINK</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+<!--Este contenedor permite que el menú se oculte o se muestre automáticamente según el tamaño de la pantalla. (osea en celular se oculta mis menus por el icono de hamburguesa)-->
+        <ul class="navbar-nav ms-auto"> <!--ul para las lista desordenada-->
+          <li class="nav-item"> <!--li para agrupar los elementos-->
+            <a class="nav-link active" href="index.html">Inicio</a><!--la etique a para crear enlaces-->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="reservas.html">Mis Reservas</a>
@@ -35,18 +38,18 @@
       </div>
     </div>
   </nav>
-
-  <!-- Contenido Principal -->
+<!-- Contenido Principal -->
+<!--esta dividido en dos columnas -->
+<!--la parte izquierda donde estan los partidos y en la derecha donde esta la imagen del estadio-->
   <div class="main-container">
     <div class="container-fluid">
       <div class="row g-0">
-        <!-- Columna Izquierda - Lista de Partidos -->
+<!-- columna izquierda : la Lista de Partidos -->
         <div class="col-lg-6 partidos-section">
           <div class="partidos-header">
             <h1 class="page-title">BARCELINK</h1>
-            <p class="subtitle">Reserva tus entradas para los próximos partidos</p>
+            <p class="subtitle">RESERVA TUS ENTRADAS PARA LOS PROXIMOS PARTIDOS </p>
           </div>
-
           <div class="partidos-scroll">
             <!-- Partido 1 -->
             <div class="partido-card">
@@ -56,12 +59,14 @@
               </div>
               <div class="partido-teams">
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="Barcelona" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png"
+                    alt="Barcelona" class="team-logo"> <!--usamos el alt para describir la imagen-->
                   <span class="team-name">Barcelona</span>
                 </div>
                 <span class="vs">VS</span>
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/uyyqqxLIYT_lQIXRyMI_RA_96x96.png" alt="Elche" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/uyyqqxLIYT_lQIXRyMI_RA_96x96.png"
+                    alt="Elche" class="team-logo">
                   <span class="team-name">Elche C.F</span>
                 </div>
               </div>
@@ -69,7 +74,6 @@
                 Reservar
               </button>
             </div>
-
             <!-- Partido 2 -->
             <div class="partido-card">
               <div class="partido-header">
@@ -78,12 +82,14 @@
               </div>
               <div class="partido-teams">
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="Barcelona" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png"
+                    alt="Barcelona" class="team-logo">
                   <span class="team-name">Barcelona</span>
                 </div>
                 <span class="vs">VS</span>
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/OSL_5Zm6kYPP1J17Bo5uDA_96x96.png" alt="Athletic" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/OSL_5Zm6kYPP1J17Bo5uDA_96x96.png"
+                    alt="Athletic" class="team-logo">
                   <span class="team-name">Athletic Club</span>
                 </div>
               </div>
@@ -91,7 +97,6 @@
                 Reservar
               </button>
             </div>
-
             <!-- Partido 3 -->
             <div class="partido-card">
               <div class="partido-header">
@@ -100,12 +105,14 @@
               </div>
               <div class="partido-teams">
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="Barcelona" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png"
+                    alt="Barcelona" class="team-logo">
                   <span class="team-name">Barcelona</span>
                 </div>
                 <span class="vs">VS</span>
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/RUcTOeFcBc7q7uku1nR_iQ_96x96.png" alt="Alavés" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/RUcTOeFcBc7q7uku1nR_iQ_96x96.png"
+                    alt="Alavés" class="team-logo">
                   <span class="team-name">Alavés</span>
                 </div>
               </div>
@@ -113,7 +120,6 @@
                 Reservar
               </button>
             </div>
-
             <!-- Partido 4 -->
             <div class="partido-card">
               <div class="partido-header">
@@ -122,12 +128,14 @@
               </div>
               <div class="partido-teams">
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="Barcelona" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png"
+                    alt="Barcelona" class="team-logo">
                   <span class="team-name">Barcelona</span>
                 </div>
                 <span class="vs">VS</span>
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/pk-hNCNpGM_JDoHHvLVF-Q_96x96.png" alt="Osasuna" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/pk-hNCNpGM_JDoHHvLVF-Q_96x96.png"
+                    alt="Osasuna" class="team-logo">
                   <span class="team-name">Osasuna</span>
                 </div>
               </div>
@@ -135,7 +143,6 @@
                 Reservar
               </button>
             </div>
-
             <!-- Partido 5 -->
             <div class="partido-card">
               <div class="partido-header">
@@ -144,12 +151,14 @@
               </div>
               <div class="partido-teams">
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png" alt="Barcelona" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_96x96.png"
+                    alt="Barcelona" class="team-logo">
                   <span class="team-name">Barcelona</span>
                 </div>
                 <span class="vs">VS</span>
                 <div class="team">
-                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/pEqmA7CL-VRo4Llq3rwIPA_96x96.png" alt="Atlético Madrid" class="team-logo">
+                  <img src="https://ssl.gstatic.com/onebox/media/sports/logos/pEqmA7CL-VRo4Llq3rwIPA_96x96.png"
+                    alt="Atlético Madrid" class="team-logo">
                   <span class="team-name">Atlético Madrid</span>
                 </div>
               </div>
@@ -159,23 +168,84 @@
             </div>
           </div>
         </div>
-
-        <!-- Columna Derecha - Imagen del Estadio -->
+<!-- columna Derecha : imagen del estadio -->
         <div class="col-lg-6 estadio-section">
           <div class="estadio-container">
-            <img src="https://images.unsplash.com/photo-1585170236738-aadfce97f025?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1163" alt="Camp Nou"
-              class="estadio-img">
-            <div class="estadio-overlay">
-              <h2>Spotify Camp Nou</h2>
-              <p>Vive la experiencia blaugrana</p>
+            <img
+              src="https://images.unsplash.com/photo-1585170236738-aadfce97f025?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1163"
+              alt="Camp Nou" class="estadio-img">
+            <div class="imagenes-principales">
+              <h2>Spotify Camp Nou</h2> <!--imagen del estadio-->
+              <p>Vive la experiencia blaugrana </p> <!--frasse-->
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+<!-- nuestro modal (una ventana encima de otra)-->
+  <div class="modal fade" id="modalReserva" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Partido</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="partido-info-modal">
+            <p><strong>Fecha:</strong> <span id="modalFecha"></span></p>
+            <p><strong>Competición:</strong> <span id="modalCompeticion"></span></p>
+          </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <div class="tipo-entrada-section">
+            <h6>Tipo de Entrada</h6>
+            <div class="entrada-options">
+              <div class="entrada-option">
+                <input type="radio" name="tipoEntrada" id="normal" value="normal" checked hidden><!--hidden es para ocultar nuestro modal-->
+                <label for="normal">
+                  <span class="entrada-nombre">Normal</span>
+                  <span class="entrada-precio">€45</span>
+                </label>
+              </div>
+              <div class="entrada-option">
+                <input type="radio" name="tipoEntrada" id="premium" value="premium" hidden>
+                <label for="premium">
+                  <span class="entrada-nombre">Premium</span>
+                  <span class="entrada-precio">€85</span>
+                </label>
+              </div>
+              <div class="entrada-option">
+                <input type="radio" name="tipoEntrada" id="vip" value="vip" hidden>
+                <label for="vip">
+                  <span class="entrada-nombre">VIP</span>
+                  <span class="entrada-precio">€150</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="cantidad-section">
+            <label for="cantidad">Cantidad de Entradas</label>
+            <input type="number" id="cantidad" min="1" max="10" value="1">
+          </div>
+          <div class="total-section">
+            <h6>Total: <span id="totalPrecio">€45</span></h6>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnConfirmar">Confirmar Reserva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--CREAMOS NUESTRO FOOTER (LA PARTE FINAL DE NUESTRA PAGINA WEB (EL PIE))-->
+  <footer class="footer text-center py-3">
+    <p>©BARCELINK | Todos los derechos reservados ⚽</p>
+    <p>TELEFONO : 61198</p>
+    <p>SEDE : VILLA EL SALVADOR</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--el scritp de bootstrap-->
+<script src="javascritp.js"></script>
 </body>
-
 </html>
